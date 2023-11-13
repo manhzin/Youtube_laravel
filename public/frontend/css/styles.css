@@ -195,6 +195,9 @@ footer {
 }
 
 /*navigation*/
+.navigation:not(:first-child) {
+    border-top: 1px solid #ccc;
+}
 .sidebar {
     width: 200px;
     padding-left: 0; /* Xóa nề trái mặc định */
@@ -223,7 +226,7 @@ footer {
 /* Kiểu chia từng khúc nhỏ của thanh container */
 .container.ytd-masthead {
     height: 56px;
-    padding: 0 16px; 
+    padding: 0 16px;
     display: flexbox;
     display: flex;
     flex-direction: row;
@@ -319,4 +322,106 @@ footer {
         text-align: center;
         margin-top: 10px;
     }
+}
+/* header */
+.header.ytd-rich-grid-renderer {
+    --yt-feed-filter-chip-bar-margin-left-first-item: 0;
+    width: 100%;
+    justify-content: center;
+}
+.chips-wrapper.ytd-feed-filter-chip-bar-renderer {
+    position: fixed;
+    top: var(--ytd-rich-grid-chips-bar-top);
+    width: var(--ytd-rich-grid-chips-bar-width);
+    background-color: var(--yt-spec-base-background);
+    z-index: 2000;
+    display: flexbox;
+    display: flex;
+    justify-content: center;
+}
+
+.left-arrow.ytd-feed-filter-chip-bar-renderer, #right-arrow.ytd-feed-filter-chip-bar-renderer {
+    position: absolute;
+    height: 100%;
+    z-index: 2020;
+    display: flexbox;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    top: 0;
+    left: 0;
+}
+.ytd-feed-filter-chip-bar-renderer[at-start] #left-arrow.ytd-feed-filter-chip-bar-renderer {
+    display: none;
+}
+.header.ytd-rich-grid-renderer {
+    --yt-feed-filter-chip-bar-margin-left-first-item: 0;
+    width: 100%;
+    justify-content: center;
+}
+.ytd-feed-filter-chip-bar-renderer {
+    --ytd-rich-grid-chips-bar-width: 100%;
+    --ytd-rich-grid-chips-bar-top: 56px;
+    --ytd-sort-filter-header-margin-left: 0;
+    width: 100%;
+    height: 56px;
+    display: flexbox;
+    display: flex;
+}
+.scroll-container.ytd-feed-filter-chip-bar-renderer {
+    position: relative;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.chips.ytd-feed-filter-chip-bar-renderer {
+    transition-duration: .15s;
+    transition-timing-function: cubic-bezier(.05,0,0,1);
+    will-change: transform;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+/*   icon */
+.yt-chip-cloud-chip-renderer[chip-style=STYLE_DEFAULT][selected], yt-chip-cloud-chip-renderer[chip-style=STYLE_HOME_FILTER][selected] {
+    background-color: var(--yt-spec-text-primary);
+    color: var(--yt-spec-text-primary-inverse);
+}
+.yt-chip-cloud-chip-renderer.ytd-feed-filter-chip-bar-renderer:first-of-type {
+    margin-left: var(--yt-feed-filter-chip-bar-margin-left-first-item,24px);
+}
+.yt-chip-cloud-chip-renderer[chip-style=STYLE_DEFAULT], yt-chip-cloud-chip-renderer[chip-style=STYLE_HOME_FILTER], yt-chip-cloud-chip-renderer[chip-style=STYLE_COLOR_RED], yt-chip-cloud-chip-renderer[chip-style=STYLE_COLOR_GREEN], yt-chip-cloud-chip-renderer[chip-style=STYLE_COLOR_BLUE], yt-chip-cloud-chip-renderer[chip-style=STYLE_REFRESH_TO_NOVEL_CHIP] {
+    background-color: var(--yt-spec-badge-chip-background);
+    color: var(--yt-spec-text-primary);
+    padding: 0 var(--ytd-margin-3x);
+    transition: background-color .5s cubic-bezier(.05,0,0,1);
+}
+.yt-chip-cloud-chip-renderer {
+    height: 32px;
+    min-width: 12px;
+    padding: 0 10px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    outline: none;
+    overflow: hidden;
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+    font-family: "Roboto","Arial",sans-serif;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    font-weight: 400;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    display: inline-flex;
+}
+.style attribute {
+    --ytd-rich-grid-chips-bar-width: 1280px;
+    --ytd-rich-grid-chips-bar-top: 56px;
+}
+.yt-chip-cloud-chip-renderer[modern] {
+    font-family: "Roboto","Arial",sans-serif;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    font-weight: 500;
 }

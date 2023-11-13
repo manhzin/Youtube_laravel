@@ -1,0 +1,251 @@
+:root{
+    --white-color:#fff;
+    --black-color:#000;
+    --text-color:#03030303;
+    --color-icon:#606060;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+i{
+    font-size: 20px;
+}
+*,*::after,*::before{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+}
+.header_logo-wrap{
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+
+}
+.header_search{
+    display: flex;
+    align-items: center;
+}
+.header_infor{
+    display: flex;
+}
+
+.barbuttom{
+    border: none;
+    background: var(--white-color);
+    margin:0px 20px;
+}
+.logoyoutube{
+    width: 115px;
+    height: 20px;
+    display: flex;
+}
+.logoyoutube span{
+    font-size: 10px;
+    font-weight: 500;
+}
+
+.header_input{
+    font-size: 18px;
+    width: 575px;
+    height: 34px;
+    border: 1px solid #cfcfcf;
+    border-right:none;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+}
+.header_input:focus{
+    box-shadow: 1px 1px 2px #999;
+
+}
+.search--btn{
+    padding: 5px 20px;
+    background: #f9f9f9;
+    border: 1px solid #cfcfcf;
+    border-top-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    margin-right: 20px;
+}
+.header_infor i{
+    padding: 0px 15px;
+}
+.header_infor{
+    align-items: center;
+}
+.header_infor img{
+    margin: 0px 15px;
+    width: 20px;
+    height: 20px;
+}
+
+/*Container */
+.gird_row{
+    width: 100%;
+    margin-top:56px;
+}
+.gird_colum--sidebar{
+    width: 17%;
+    margin-top: 10px;
+    height: 100vh;
+    overflow-y: scroll;
+    position: fixed;
+}
+.gird_colum--sidebar::-webkit-scrollbar{
+    width: 8px;
+}
+.gird_colum--sidebar::-webkit-scrollbar-thumb{
+    background-color: transparent;
+}
+.gird_colum--sidebar::-webkit-scrollbar-thumb-track{
+    background-color: transparent;
+}
+.gird_colum--sidebar:hover::-webkit-scrollbar-thumb{
+    background-color: #909090;
+}
+.gird_colum--videowrap{
+    width: 83%;
+    margin-left: 266px;
+}
+.sidebar_item-link {
+    display: flex;
+    text-decoration:none ;
+    width: 98%;
+    padding:10px 20px;
+}
+.sidebar_item-link:hover {
+    background:#e5e5e5;
+}
+.sidebaricon{
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    margin-right: 14px;
+    color: #000;
+}
+.sidebaricon img{
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+}
+.sidebartext{
+    color: #030303;
+}
+.hr{
+    width: 98%;
+    height: 1px;
+    border-top: 1px solid #e5e5e5;
+    margin: 10px 0px;
+}
+.sidebar_catergories{
+    color: #030303;
+    margin: 4px 0px 4px 28px;
+    font-weight: 500;
+    font-size: 14px;
+    font-weight: bold;
+}
+.copyright{
+    padding: 24px;
+}
+.copyright list{
+    display: flex;
+    padding: 0px;
+}
+.copyright_list-item{
+    list-style: none;
+    padding: 0px 5px;
+    white-space: nowrap;
+}
+.copyright_list-item a{
+    text-decoration: none;
+    color: #606060;
+    font-weight: 550;
+    font-size: 15px;
+}
+.copyright-text{
+    margin: 12px 0px 50px 0px;
+    display: block;
+    color: #909090;
+    font-size: 14px;
+    padding-left: 3px;
+}
+/*Catergories */
+.gird_colum-catergories{
+    padding: 10px;
+    border-bottom: 1px solid #dbdbdb;
+    border-top: 1px solid #dbdbdb;
+    white-space: nowrap;
+}
+.catergories-item{
+    outline: none;
+    border: 1px solid #cec6c6;
+    padding: 8px 14px;
+    border-radius: 200px;
+    margin-left: 8px;
+}
+.catergories-item i{
+    font-size: 12px;
+    
+}
+.catergories-item-active{
+    background: black;
+    color: white;
+    margin-left: 12px;
+}
+.catergories-item-last{
+    padding: 8px 40px;
+}
+
+/*Video part*/
+.gird_colum-videos{
+    display: flex;
+    flex-wrap: wrap;
+}
+.gird_colum-video{
+    width:25%;
+    padding: 20px 30px 12px 12px;
+    background: #f9f9f9;
+}
+.imgwrap{
+    position: relative;
+}
+.imgwrap img{
+    width: 100%;
+    border-radius: 5%;
+}
+.img-timetext{
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    background: #000;
+    color: #fff;
+    padding: 0px 3px;
+}
+.imgchannel img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin: 10px 5px 0px 0px;
+}
+.video-title-wrap{
+    display: flex;
+}
+.video-title{
+    font-weight: bold;
+}
+.video-channelimg-text{
+    font-size: 13px;
+    color: #606060;
+}
+.videointrotitle span{
+    font-size: 13px;
+    color: #606060;
+}
